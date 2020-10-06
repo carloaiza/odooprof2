@@ -1,0 +1,3 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+gotagota_prestamo_access_right_consult,gotagota_prestamo_access_right_consult,model_gotagota_prestamo,gotagota_group_consult,1,0,0,0
+gotagota_prestamo_access_right_manager,gotagota_prestamo_access_right_manager,model_gotagota_prestamo,gotagota_group_manager,1,1,1,1
