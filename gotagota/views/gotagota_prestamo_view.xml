@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
+    <record id='gotagota_prestamo_view_form' model='ir.ui.view'>
+        <field name="name">gotagota.prestamo.form</field>
+        <field name="model">gotagota.prestamo</field>
+        <field name="arch" type="xml">
+            <form string="Model">
+                <header>
+                    <button name="prender_sensor" states="enstudio,approved,refused" groups="gotagota.gotagota_group_manager"
+                            string="Encender" type="object"  class="oe_highlight"/>
+                    <button name="aprobar_prestamo" states="enstudio" groups="gotagota.gotagota_group_manager" string="Aprobar" type="object"  class="oe_highlight"/>
+                    <button name="rechazar_prestamo" states="approved" groups="gotagota.gotagota_group_manager" string="Rechazar" type="object"  class="oe_highlight"/>
+                    <field name="state" widget="statusbar" statusbar_visible="enstudio,approved,refused"/>
+                </header>
+
+
+                <sheet>
+                    <group >
+                        <field name="name" />
+                        <field name="fecha_prestamo" />
+                        <field name="respuesta" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id='gotagota_prestamo_view_tree' model='ir.ui.view'>
+        <field name="name">gotagota.prestamo.tree</field>
+        <field name="model">gotagota.prestamo</field>
+        <field name="arch" type="xml">
+            <tree string="Prestamo">
+                <field name="name" />
+                <field name="fecha_prestamo" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+
+
 <record id='gotagota_prestamos_action' model='ir.actions.act_window'>
         <field name="name">Prestamos</field>
         <field name="res_model">gotagota.prestamo</field>
@@ -12,4 +51,7 @@
           </p>
         </field>
     </record>
+
+
+
 </odoo>

@@ -8,13 +8,15 @@
     'maintainer': 'Carlos Loaiza',
     'company': 'Universidad de Manizales',
     'website': 'https://www.umanizales.edu.co',
-    'depends': ['mass_mailing'],
+    'depends': [],
     'data': [
         'security/gotagota_security.xml',
         'security/ir.model.access.csv',
         'views/gotagota_prestamo_view.xml',
+        'views/gotagota_parametricas_view.xml',
+        'views/gotagota_cobrador_view.xml',
         'views/gotagota_menu.xml',
-
+        'data/gotagota_data_departamento.xml',
         #'views/product_label.xml',
     ],
     'license': 'AGPL-3',
